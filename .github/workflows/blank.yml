@@ -18,6 +18,8 @@ jobs:
     needs: build-push-image
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
       - name: stop and remove existing container
         run: docker-compose down --rmi all
       - name: start container
