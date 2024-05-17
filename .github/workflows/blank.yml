@@ -15,8 +15,6 @@ jobs:
         run: docker images
       - name: Login to GitHub Registry
         run: echo ${{ secrets.TOKEN_GITHUB }} | docker login -u deadyiss --password-stdin
-      - name: Push Image
-        run: docker push $IMAGE_NAME
       - name: stop and remove existing container
         run: docker-compose down --rmi all
       - name: start container
