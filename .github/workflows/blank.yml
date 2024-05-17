@@ -2,7 +2,7 @@ name: Build, Deploy Docker Image
 run-name: Build, Deploy Image
 on: [push]
 env:
-  IMAGE_NAME: "simple-test"
+  IMAGE_NAME: "nginx-test"
 jobs:
   build-push-image:
     runs-on: ubuntu-latest
